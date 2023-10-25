@@ -1,14 +1,14 @@
 const mongoose = require('mongoose')
 
 const UserSchema = new mongoose.Schema({
-  microsoftId: {
+  githubId: {
     type: String,
-    required: true,
+    required: true
   },
   displayName: {
     type: String,
-    required: true,
-  }
+    required: true
+  }  
 })
 
 module.exports = mongoose.model('User', UserSchema)

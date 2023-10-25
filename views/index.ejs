@@ -4,62 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Colony</title>
 </head>
 <body>
-    <header>
-        <div class="user">
-            <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_user2-512.png" class="user-icon">
-            <span>New User<span>
-        </div>
-        <nav>
-            <ul class="nav">
-                <li class="li">
-                    <ul class="sub-nav">
-                        <li>Account</li>
-                        <li>Overview</li>
-                        <li>Details</li>
-                        <li>Settings</li>
-                    </ul>
-                </li>
-                <li class="li">
-                    <ul class="sub-nav">
-                        <li>Projects</li>
-                        <li>Ongoing</li>
-                        <li>Completed</li>
-                        <li>Cancelled</li>
-                    </ul>
-                </li>
-                <li class="li">Teams</li>
-                <li class="li">Calendar</li>
-                <li class="li">Messages</li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="section">
-            <h1 class="heading">Account</h1>
-            <section class="sub-section overview">
-                <h2>Overview</h2>
-            </section>
-            <section class="sub-section details">
-                <h2>Details</h2>
-            </section>
-            <section class="sub-section settings">
-                <h2>Settings</h2>
-            </section>
-        </section>
-        <section class="section">
-            <% projects.forEach( el => { %>
-                <h1 class="heading">Projects</h1>
-                <section class="sub-section ongoing">
-                    <h2><%= el.name %></h2>
-                </section>
-        <% }) %>
-            
-          
-        </section>
+    <main class="index">
+        <h1>Colony</h1>
+        <img src="https://img.shields.io/badge/github-000000?style=for-the-badge&logo=github&logoColor=white" alt="github icon">
+        <a href="/auth/github">Log in with GitHub</a>
     </main>
 </body>
 </html>

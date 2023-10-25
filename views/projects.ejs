@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Projects</title>
+</head>
+<body>
+    <%- include('./nav') %>
+    <main>
+        <section class="section">
+            <h1 class="heading">Projects</h1>
+            <% projects.forEach( project => { %>
+            <% if (project.own) { %>
+                <section class="own sub-section <%= project.status %>">               
+            <% } else { %>
+                <section class="sub-section <%= project.status %>">
+            <% } %>      
+                    <h3 class="title"><%= project.name %></h3>
+                    <span><%= project.status %></span>
+                    <ul class="column">
+                    <% project.tasks.forEach( i => { %>
+                        <li class="title"><%= i.name %></li>
+                        <li><%= i.objective %></li>
+                        <li><%= i.deadline %></li>
+                        <li><%= i.status %></li>
+                    <% }) %>
+                    </ul>
+                    <% if (project.own) { %>
+                    <h3 class="title">Add task</h3>
+                    <form class="column" method="post" action="/projects/newTask">
+                        <input name="project" value="<%= project._id %>" type="hidden">
+                        <label>Task <input name="name"></label>
+                        <label>Objective <input name="objective"></label>
+                        <label>Deadline <input name="deadline" type="date"></label>
+                        <button>Add</button>
+                    </form>
+                    <% } %>
+                </section> 
+            <% }) %>
+            </section>
+            <section class="section">
+            <h2 class="heading">New project</h2>
+            <form class="column" method="post" action="/projects/new">
+                <label>Name <input name="name"></label>
+                <button>Add</button>
+            </form>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

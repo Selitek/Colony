@@ -1,102 +1,110 @@
 * {
     box-sizing: border-box;
-  }
-  html {
-      font: 62.5% sans-serif;
-  }
-  main {
-      background: azure;
-      height: 100vh;
-      padding: 10px;
-      overflow: auto;
-  }
-  header {
-      width: 20%;
-      min-width: 200px;
-      float: left;
-      background: cadetblue;
-      height: 100vh;
-      overflow: auto;
-  }
-  header * {
-      text-align: center;
-  }
-  .nav,
-  .sub-nav {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      padding: 5%;
-  }
-  .li {
+}
+html {
+    font: 62.5% sans-serif;
+}
+body {
+    margin: 0;
+}
+main {
+    background: azure;
+    height: 100vh;
+    overflow: auto;
+    padding: 10px;
+}
+header {
+    width: 20%;
+    min-width: 200px;
+    float: left;
+    background: cadetblue;
+    height: 100vh;
+    overflow: auto;
+    text-align: center;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 5%;
+}
+.title {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.header-li {
     width: 100%;
     padding-bottom: 10px;
     border-bottom: 1px solid black;
-  }
-  .user {
-      height: 100px;
-      background: azure;
-      margin: 15px;
-      border-radius: 20px;
-  }
-  .user-icon {
-      width: 50px;
-      margin: 10px;
-  }
-  .section {
-      position: relative;
-      display: flex;
-      flex-flow: wrap;
-      padding: 15px 0 15px 20px;
-  }
-  .heading {
-      position: absolute;
-      top: 5px;
-      left: 20px;
-      text-transform: uppercase;
-      background: cadetblue;
-      border-radius: 10px;
-      padding: 15px;
-  }
-  .user,
-  .sub-section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-  .sub-section {
-      width: 150px;
-      height: 150px;
-      border-radius: 20px;
-      margin: 10px;
-      padding: 10px;
-      box-shadow: 5px 5px 10px -5px cadetblue;
-      align-items: flex-end;
-  }
-  .overview {
-      background-image: url("https://cdn3.iconfinder.com/data/icons/mini-icon-set-general-office/91/General_-_Office_19-512.png");
-  }
-  .details {
-      background-image: url("https://cdn1.iconfinder.com/data/icons/web-basic-2/512/711_menu__ui__user_interface_-512.png");
-  }
-  .settings {
-      background-image: url("https://cdn1.iconfinder.com/data/icons/google-material-design/1000/settings-512.png");
-  }
-  .ongoing {
-      background-image: url("https://cdn2.iconfinder.com/data/icons/user-interface-vol-2-21/64/Ongoing-512.png");
-  }
-  .completed {
-      background-image: url("https://cdn1.iconfinder.com/data/icons/frecons-one/64/success_ceklist_task_done-512.png");
-  }
-  .cancelled {
-      background-image: url("https://cdn1.iconfinder.com/data/icons/frecons-one/64/cancel_cancelled_fail_failed_failure-512.png");
-  }
-  .task {
-      background-image: url("https://cdn4.iconfinder.com/data/icons/stop-virus-outline-iconset/128/ic_clipboard-512.png");
-  }
-  .sub-section {
-      background-size: 50px;
-      background-position: center;
-      background-repeat: no-repeat;
-  }
+}
+.header-user {
+    height: 100px;
+    background: azure;
+    margin: 15px;
+    border-radius: 20px;
+}
+.user-icon {
+    width: 50px;
+    margin: 10px;
+}
+.heading {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    text-transform: uppercase;
+    background: cadetblue;
+    border-radius: 10px;
+    padding: 15px;
+}
+.header-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.index {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.section {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 0 15px 20px;
+}
+.sub-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-width: 150px;
+    min-height: 150px;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 5px;
+    box-shadow: 5px 5px 10px -5px cadetblue;
+    background: lightblue;
+}
+.dash-sub-section {
+    justify-content: flex-end;
+}
+.sub-section > * {
+    padding: 7.5px;
+    text-align: center;
+}
+.dash-projects {
+    background-image: url("https://cdn3.iconfinder.com/data/icons/mini-icon-set-general-office/91/General_-_Office_19-512.png");
+}
+.dash-teams {
+    background-image: url("https://cdn0.iconfinder.com/data/icons/business-management-2-14/256/b-88-512.png");
+}
+.dash-tasks {
+    background-image: url("https://cdn4.iconfinder.com/data/icons/stop-virus-outline-iconset/128/ic_clipboard-512.png");
+}
+.sub-section {
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
