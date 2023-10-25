@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <%- include('./nav') %>
+    <main class="main">
+        <section class="section">
+            <h1 class="heading">Projects</h1>
+            <% projects.forEach( i => { %>
+            <ul class="dash-projects sub-section dash-sub-section">
+                <li class="title"><%= i.name %></li>
+                <li><%= i.status %></li>
+            </ul>
+            <% }) %>
+        </section>
+        <section class="section">
+            <h1 class="heading">Tasks</h1>
+            <% tasks.forEach( i => { %>
+            <ul class="dash-tasks sub-section dash-sub-section">
+                <li class="title"><%= i.name %></li>
+                <li><%= i.status %></li>
+            </ul>
+            <% }) %>
+        </section>
+        <section class="section">
+            <h1 class="heading">Teams</h1>
+            <% teams.forEach( i => { %>
+            <ul class="dash-teams sub-section dash-sub-section">
+                <li class="title"><%= i.name %></li>
+            </ul>
+            <% }) %>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
