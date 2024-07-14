@@ -37,6 +37,9 @@ header {
     width: 100%;
     padding-bottom: 10px;
     border-bottom: 1px solid black;
+    cursor: pointer;
+    list-style: none;
+    font-size: 16px;
 }
 .header-user {
     height: 100px;
@@ -47,6 +50,7 @@ header {
 .user-icon {
     width: 50px;
     margin: 10px;
+      cursor: pointer;
 }
 .heading {
     position: absolute;

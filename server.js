@@ -12,6 +12,9 @@ const projectsRoutes = require('./routes/projects')
 const tasksRoutes = require('./routes/tasks')
 const teamsRoutes = require('./routes/teams')
 
+const PORT = process.env.PORT || 3000
+
+
 require('dotenv').config({path: './config/.env'})
 
 // Passport config
@@ -45,7 +48,6 @@ app.use('/projects', projectsRoutes)
 app.use('/tasks', tasksRoutes)
 // app.use('/teams', teamsRoutes)
 
- 
-app.listen(process.env.PORT, ()=>{
-    console.log('Server is running, you better catch it!')
-})    
+app.listen(PORT, ()=>{
+  console.log('The server is running on port ${PORT}!')
+}) 
